@@ -5,4 +5,21 @@ This is a guide to the analysis of the microbial community used for manuscript M
 
 Begin by downloading the raw data from NCBI (BioProject XXXX), cloning this repository, and executing the following commands.
 
-manifest_import.csh
+#Dada2 works best to identify errors at the sequencing run level. Thus, for each separate MiSeq run (BoxA, BoxB), import and run dada2 separately:
+
+sbatch ../../scripts/manifest_import.csh
+#Once complete, check the demux.qzv file
+#Next, run dada2 on each sequence run (BoxA, BoxB) separately
+#cp and manually update the config file
+cp ../../config_files/dada2_only.config .
+
+#submit the dada2 script for each (will take a long time)
+sbatch ../../scripts/dada2_only.csh
+
+#Merge the two outputs in a new folder (kabirs_merged)
+cp ../../config_files/moving_picture_analysis.config .
+#edit with the appropriate variables
+#Including the path to the classifier
+sbatch ../../scripts/moving_picture_analysis.csh
+
+
