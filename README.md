@@ -23,12 +23,20 @@ sbatch ../../scripts/dada2_only.csh
 
 #Merge the two outputs in a new folder (kabirs_merged)
 
-cp ../../config_files/moving_picture_analysis.config .
+cp ../../config_files/qiime2_merge_sequence.config .
+
+sbatch ../../scripts/qiime2_merge_sequence_2_runs.csh
+
+#Make the taxonomy file to run MicrobIEM
+
+cp ../../config_files/taxonomy_only.config .
+
+sbatch ../../scripts/taxonomy_only.csh
 
 #edit with the appropriate variables
 
 #Including the path to the classifier
 
-sbatch ../../scripts/moving_picture_analysis.csh
+sbatch ../../scripts/taxonomy_only.csh
 
 
