@@ -33,10 +33,9 @@ cp ../../config_files/taxonomy_only.config .
 
 sbatch ../../scripts/taxonomy_only.csh
 
-#edit with the appropriate variables
+#Export and run MicrobIEM
 
-#Including the path to the classifier
 
-sbatch ../../scripts/taxonomy_only.csh
+
 
 
