@@ -32,6 +32,9 @@ grep -v "# Constructed from biom file" ${PREFIX}_dir/feature-table.biom.txt > ${
 #Remove \# and Change OTU ID to OTU_ID
 perl ../../scripts/adjust_mat.pl ${PREFIX}_dir/feature-table.biom.txt2 > ${PREFIX}_dir/feature-table.biom.txt3
 
+#Run the Rscript
+
+
 echo "End of script"
 date
 
