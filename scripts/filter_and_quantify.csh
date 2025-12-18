@@ -33,6 +33,11 @@ qiime feature-table group \
  --p-mode 'sum' \
  --o-grouped-table ${PREFIX}_biomass_exp_group.qza
 
+qiime feature-table filter-seqs\
+ --i-data ${REPS}\
+ --i-table ${PREFIX}_biomass_exp_group.qza\
+ --o-filtered-data ${PREFIX}_biomass_exp_group_reps.qza
+
 #export the table to choose the read count
 qiime tools export --input-path ${PREFIX}_biomass_exp_group.qza --output-path ${PREFIX}_biomass_exp_group_dir
 
