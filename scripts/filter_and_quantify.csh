@@ -15,18 +15,13 @@ source ./filter_and_quantify.config
 echo "Filter for Biomass and experiment"
 date
 
+cat ${METADATA} | grep "sample-id" > ${METADATA}_biomass_exp
+cat ${METADATA} | grep "biomass" | grep "experiment" >> ${METADATA}_biomass_exp
+
 #Keep only the biomass or biomass inhibition samples
 qiime feature-table filter-samples \
  --i-table ${TABLE}\
- --m-metadata-file ${METADATA} \
- --p-where '[Project] IN ("biomass", "biomass inhibition")'\
- --o-filtered-table ${PREFIX}_biomass.qza
-
-#Keep only the experimental samples (not controls)
-qiime feature-table filter-samples \
- --i-table ${PREFIX}_biomass.qza\
- --m-metadata-file ${METADATA} \
- --p-where '[SampleType]="experiment"'\
+ --m-metadata-file ${METADATA}_biomass_exp \
  --o-filtered-table ${PREFIX}_biomass_exp.qza
 
 #merge by OriginalName
