@@ -9,7 +9,7 @@
 module load qiime2/2023.5.1
 module load r/4.2.0
 
-source ./export_MicrobIEM_in_R.config
+source ./quality_control_biomass.config
 
 #taxonomy
 echo "Export table"
@@ -39,7 +39,36 @@ Rscript ../../scripts/MicrobIEM_R_script.R
 
 qiime feature-table filter-features --i-table ${TABLE} --m-metadata-file ASV_contam_names.txt  --o-filtered-table ${PREFIX}.qza --p-exclude-ids
 
-qiime feature-table filter-seqs --i-data ${REPS} --o-filtered-data ${PREFIX}_reps.qza --m-metadata-file ASV_contam_names.txt
+qiime feature-table filter-seqs --i-data ${REPS} --o-filtered-data ${PREFIX}_reps.qza --m-metadata-file ASV_contam_names.txt --p-exclude-ids
+
+qiime quality-control exclude-seqs\
+ --i-query-sequences ${PREFIX}_reps.qza \
+ --i-reference-sequences ../../db/Biomass_Seqs_wFullLengths.qza\
+ --p-method blast \
+ --p-perc-identity 0.97 \
+ --p-perc-query-aligned 0.97 \
+ --o-sequence-hits ${PREFIX}_reps_qc_hits.qza \
+ --o-sequence-misses ${PREFIX}_reps_qc_misses.qza
+
+qiime feature-table filter-features \
+ --i-table ${PREFIX}.qza \
+ --m-metadata-file ${PREFIX}_reps_qc_hits.qza \
+ --o-filtered-table  ${PREFIX}_hits_removed.qza \
+ --p-exclude-ids
+
+#Remove eukaryotic taxa and chloroplasts
+
+qiime taxa filter-table \
+ --i-table ${PREFIX}_hits_removed.qza \
+ --i-taxonomy ${TAXA} \
+ --p-exclude mitochondria,chloroplast \
+ --o-filtered-table ${PREFIX}_hits_removed_no_euks.qza
+
+qiime feature-table filter-seqs \
+ --i-data ${PREFIX}_reps.qza\
+ --i-table ${PREFIX}_hits_removed_no_euks.qza\
+ --o-filtered-data ${PREFIX}_reps_hits_removed_no_euks.qza
+
 
 echo "End of script"
 date
