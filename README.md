@@ -21,9 +21,11 @@ cp ../../config_files/dada2_only.config .
 
 sbatch ../../scripts/dada2_only.csh
 
-#Merge the two outputs in a new folder (kabirs_merged)
+#Merge the two outputs in a new folder (e.g. make a new director called kabirs_merged and work in that folder)
 
 cp ../../config_files/qiime2_merge_sequence.config .
+
+#edit the config file for your specific analysis then run
 
 sbatch ../../scripts/qiime2_merge_sequence_2_runs.csh
 
@@ -31,11 +33,17 @@ sbatch ../../scripts/qiime2_merge_sequence_2_runs.csh
 
 cp ../../config_files/taxonomy_only.config .
 
+#Edit the config file and run
+
 sbatch ../../scripts/taxonomy_only.csh
 
 #Export and run MicrobIEM
 
+cp ../../config_files/export_MicrobIEM_in_R.config .
 
+#Edit the config file and run the following script (note that this clones MicrobIEM, which should be done once)
+
+sbatch ../../scripts/export_MicrobIEM_in_R.csh
 
 
 

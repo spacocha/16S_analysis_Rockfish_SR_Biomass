@@ -33,7 +33,13 @@ grep -v "# Constructed from biom file" ${PREFIX}_dir/feature-table.biom.txt > ${
 perl ../../scripts/adjust_mat.pl ${PREFIX}_dir/feature-table.biom.txt2 > ${PREFIX}_dir/feature-table.biom.txt3
 
 #Run the Rscript
+Rscript ../../scripts/MicrobIEM_R_script.R
 
+#Remove those from the table and sequeces
+
+qiime feature-table filter-features --i-table ${TABLE} --m-metadata-file ASV_contam_names.txt  --o-filtered-table ${PREFIX}.qza --p-exclude-ids
+
+qiime feature-table filter-seqs --i-data ${REPS} --o-filtered-data ${PREFIX}_reps.qza --m-metadata-file ASV_contam_names.txt
 
 echo "End of script"
 date
