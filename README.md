@@ -65,3 +65,10 @@ cp ../../config_files/exp_only_moving_pictures.config
 
 sbatch ../../scripts/exp_only_moving_pictures.csh
 
+#Do the beta diversity analysis on BC and Weighted Unifrac distance matrices
+
+cp ../../config_files/beta_group_significance.config
+
+#Submit the job
+
+sbatch ../../scripts/beta_group_significance.csh
