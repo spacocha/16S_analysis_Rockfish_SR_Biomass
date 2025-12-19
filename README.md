@@ -72,3 +72,15 @@ cp ../../config_files/beta_group_significance.config
 #Submit the job
 
 sbatch ../../scripts/beta_group_significance.csh
+
+#Do FAPROTAX analysis of functions
+
+#This includes downloading FAPROTAX, which should only be done once
+
+cp ../../config_files/FAPROTAX_analysis.config
+
+#Adjust parameters and run
+
+sbatch ../../scripts/FAPROTAX_analysis.csh
+
+
