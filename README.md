@@ -39,11 +39,29 @@ sbatch ../../scripts/taxonomy_only.csh
 
 #Export and run MicrobIEM
 
-cp ../../config_files/export_MicrobIEM_in_R.config .
+cp ../../config_files/quality_control_biomass.config .
 
-#Edit the config file and run the following script (note that this clones MicrobIEM, which should be done once)
+#Edit the config file and run the following script to clean contaminants
+# note that this clones MicrobIEM, which should be done once
+#It also uses a blast against a database of known contaminants
+#Fianlly removes euks and mito sequences
 
-sbatch ../../scripts/export_MicrobIEM_in_R.csh
+sbatch ../../scripts/quality_control_biomass.csh
 
+#Next, filter out the experimental samples and quantify the total number of reads to use
 
+cp ../../config_files/filter_and_quantify.config
+
+#Then submit the script
+
+sbatch ../../scripts/filter_and_quantify.csh
+
+#Check the count file in ${PREFIX}_biomass_exp_group_dir/feature-table.biom.count.txt
+#Use the first number as the sequence depth in the following file
+
+cp ../../config_files/exp_only_moving_pictures.config
+
+#Then submit as
+
+sbatch ../../scripts/exp_only_moving_pictures.csh
 
