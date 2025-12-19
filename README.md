@@ -42,7 +42,7 @@ sbatch ../../scripts/taxonomy_only.csh
 cp ../../config_files/quality_control_biomass.config .
 
 #Edit the config file and run the following script to clean contaminants
-# note that this clones MicrobIEM, which should be done once
+#note that this clones MicrobIEM, which should be done once
 #It also uses a blast against a database of known contaminants
 #Fianlly removes euks and mito sequences
 
