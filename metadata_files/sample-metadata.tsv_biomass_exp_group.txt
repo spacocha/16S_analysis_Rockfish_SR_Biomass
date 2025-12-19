@@ -1,0 +1,45 @@
+sample-id	sample-id-old	Step1Conc	WellNo	i7Primer	i5Primer	OriginalName	TechRepNo	FirstNo	Experiment	Project	SampleType	ControlType	Inhibitor	Substrate	SedimentLocation	Condition	Timepoint	Date	SourceType	Split	TubeNo	SeqId	f_SO4	AnalysisGroup1	AnalysisGroup2	AnalysisGroup3
+K0823	B14	0.566	B3	H701	H506	K0823	1	3	8/3/23	biomass inhibition	experiment	NA	no	NA	NA	K0823 inoc slurry	NA	NA	NA	No	NA	BoxB	NA	no_NA_NA	T0_start	Start
+K2AT7CY	B70	23.1	F9	H723	H513	K2AT7CY	2	45	K0722	biomass	experiment	NA	no	Cy	NA	Tr1-A	7	8/19/22	NA	No	NA	BoxB	0.661768624	no_Cy_7	T_Final	no_Cy_Final
+K2AT7EU	B26	45	C3	H702	H505	K2AT7EU	3	41	K0722	biomass	experiment	NA	no	Eu	NA	Tr1-A	7	8/19/22	NA	No	NA	BoxB	0.528488622	no_Eu_7	T_Final	no_Eu_Final
+K2BT7CY	B48	47.6	E1	H706	H516	K2BT7CY	4	46	K0722	biomass	experiment	NA	no	Cy	NA	Tr1-B	7	8/19/22	NA	No	NA	BoxB	0.569269089	no_Cy_7	T_Final	no_Cy_Final
+K2BT7EU	B54	56	E7	H701	H516	K2BT7EU	5	39	K0722	biomass	experiment	NA	no	Eu	NA	Tr1-B	7	8/19/22	NA	No	NA	BoxB	0.540306019	no_Eu_7	T_Final	no_Eu_Final
+K2CT7CY	B82	45.8	G9	H705	H510	K2CT7CY	6	43	K0722	biomass	experiment	NA	no	Cy	NA	Tr1-C	7	8/19/22	NA	No	NA	BoxB	0.569640626	no_Cy_7	T_Final	no_Cy_Final
+K2CT7EU	B13	51	B2	H703	H505	K2CT7EU	7	44	K0722	biomass	experiment	NA	no	Eu	NA	Tr1-C	7	8/19/22	NA	No	NA	BoxB	0.556373624	no_Eu_7	T_Final	no_Eu_Final
+K4MNAT5CY	B22	51	B11	H714	H505	K4MNAT5CY	10	32	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iA-1	5	NA	NA	Yes	NA	BoxB	1.05423766	yes_Cy_5	T_Final	yes_Cy_Final
+K4MNBT5CY	B34	39.9	C11	H710	H517	K4MNBT5CY	11	30	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iB-1	5	NA	NA	Yes	NA	BoxB	1.115592094	yes_Cy_5	T_Final	yes_Cy_Final
+K4MNCT5CY	B5	53	A6	H723	H517	K4MNCT5CY	12	28	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iC-1	5	NA	NA	Yes	NA	BoxB	1.031470341	yes_Cy_5	T_Final	yes_Cy_Final
+K4MOAT0CY	B45	1.28	D10	H701	H503	K4MOAT0CY	13	1	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iA	0	NA	NA	No	NA	BoxB	0.982950986	yes_Cy_0	T0_start	Start
+K4MOAT0EU	B46	4.23	D11	H702	H503	K4MOAT0EU	14	9	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iA	0	NA	NA	No	NA	BoxB	0.997487376	yes_Eu_0	T0_start	Start
+K4MOAT10CY	B80	38	G7	H707	H513	K4MOAT10CY	15	56	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iA-1	10	NA	NA	Yes	NA	BoxB	0.97196322	yes_Cy_10	T_Final	yes_Cy_Final
+K4MOAT10EU	B79	too high	G6	H701	H510	K4MOAT10EU	16	46	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iA	10	NA	NA	No	46	BoxB	1.004675407	yes_Eu_10	T_Final	yes_Eu_Final
+K4MOAT5EU	B17	48.9	B6	H705	H506	K4MOAT5EU	17	22	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iA	5	NA	NA	No	NA	BoxB	1.037699676	yes_Eu_5	T_Final	yes_Eu_Final
+K4MOBT0CY	B31	0.87	C8	H706	H517	K4MOBT0CY	18	11	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iB	0	NA	NA	No	NA	BoxB	1.038030868	yes_Cy_0	T0_start	Start
+K4MOBT0EU	B42	4.42	D7	H710	H503	K4MOBT0EU	19	8	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iB	0	NA	NA	No	NA	BoxB	1.006846517	yes_Eu_0	T0_start	Start
+K4MOBT10CY	B67	19.4	F6	H703	H513	K4MOBT10CY	20	54	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iB-1	10	NA	NA	Yes	NA	BoxB	0.970610533	yes_Cy_10	T_Final	yes_Cy_Final
+K4MOBT10EU	B89	53	H4	H703	H510	K4MOBT10EU	21	45	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iB	10	NA	NA	No	45	BoxB	0.988242811	yes_Eu_10	T_Final	yes_Eu_Final
+K4MOBT5EU	B16	54	B5	H723	H505	K4MOBT5EU	22	21	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iB	5	NA	NA	No	NA	BoxB	1.019645245	yes_Eu_5	T_Final	yes_Eu_Final
+K4MOCT0CY	B71	0.798	F10	H706	H522	K4MOCT0CY	23	12	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iC	0	NA	NA	No	NA	BoxB	0.976786032	yes_Cy_0	T0_start	Start
+K4MOCT0EU	B49	4.4	E2	H712	H516	K4MOCT0EU	24	7	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iC	0	NA	NA	No	NA	BoxB	1.00993513	yes_Eu_0	T0_start	Start
+K4MOCT10CY	B10	49.8	A11	H711	H506	K4MOCT10CY	25	53	K0824	biomass inhibition	experiment	NA	yes	Cy	NA	M(+) iC-1	10	NA	NA	Yes	53	BoxB	0.997507433	yes_Cy_10	T_Final	yes_Cy_Final
+K4MOCT10EU	B1	59	A1	H701	H505	K4MOCT10EU	26	44	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iC	10	NA	NA	No	44	BoxB	1.001991432	yes_Eu_10	T_Final	yes_Eu_Final
+K4MOCT5EU	B12	45.4	B1	H702	H517	K4MOCT5EU	27	20	K0824	biomass inhibition	experiment	NA	yes	Eu	NA	M(+) iC	5	NA	NA	No	NA	BoxB	1.005585684	yes_Eu_5	T_Final	yes_Eu_Final
+K4NMAT0CY	B76	0.309	G3	H710	H510	K4NMAT0CY	34	14	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iA-1	0	NA	NA	Yes	NA	BoxB	1.058315649	no_Cy_0	T0_start	Start
+K4NMAT0EU	B29	3.61	C6	H707	H505	K4NMAT0EU	35	5	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iA	0	NA	NA	No	NA	BoxB	1.027439426	no_Eu_0	T0_start	Start
+K4NMAT10CY	B57	45.5	E10	H705	H516	K4NMAT10CY	36	64	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iA-1	10	NA	NA	Yes	64	BoxB	0.322395877	no_Cy_10	T_Final	no_Cy_Final
+K4NMAT10EU	B55	53	E8	H702	H516	K4NMAT10EU	37	49	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iA	10	NA	NA	No	NA	BoxB	0.490585924	no_Eu_10	T_Final	no_Eu_Final
+K4NMAT5CY	B20	48.6	B9	H706	H506	K4NMAT5CY	38	40	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iA-1	5	NA	NA	Yes	NA	BoxB	0.799684554	no_Cy_5	T_Final	no_Cy_Final
+K4NMAT5EU	B24	37.4	C1	H703	H506	K4NMAT5EU	39	25	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iA	5	NA	NA	No	NA	BoxB	0.770528336	no_Eu_5	T_Final	no_Eu_Final
+K4NMBT0CY	B83	0.699	G10	H712	H513	K4NMBT0CY	40	16	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iB-1	0	NA	NA	Yes	NA	BoxB	1.01162081	no_Cy_0	T0_start	Start
+K4NMBT0EU	B56	1.96	E9	H703	H516	K4NMBT0EU	41	4	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iB	0	NA	NA	No	NA	BoxB	0.993677619	no_Eu_0	T0_start	Start
+K4NMBT10CY	B73	24.2	F12	H720	H513	K4NMBT10CY	42	62	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iB-1	10	NA	NA	Yes	62	BoxB	0.314492475	no_Cy_10	T_Final	no_Cy_Final
+K4NMBT10EU	B52	too high	E5	H711	H516	K4NMBT10EU	43	50	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iB	10	NA	NA	No	NA	BoxB	0.658840457	no_Eu_10	T_Final	no_Eu_Final
+K4NMBT5CY	B7	56	A8	H712	H506	K4NMBT5CY	44	38	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iB-1	5	NA	NA	Yes	NA	BoxB	0.819071408	no_Cy_5	T_Final	no_Cy_Final
+K4NMBT5EU	B25	42.8	C2	H701	H517	K4NMBT5EU	45	26	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iB	5	NA	NA	No	NA	BoxB	0.792849264	no_Eu_5	T_Final	no_Eu_Final
+K4NMCT0CY	B86	0.217	H1	H714	H510	K4NMCT0CY	46	18	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iC-1	0	NA	NA	Yes	NA	BoxB	0.908363775	no_Cy_0	T0_start	Start
+K4NMCT0EU	B60	3.32	F1	H710	H522	K4NMCT0EU	47	3	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iC	0	NA	NA	No	NA	BoxB	0.987516938	no_Eu_0	T0_start	Start
+K4NMCT10CY	B50	57	E3	H720	H516	K4NMCT10CY	48	60	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iC-1	10	NA	NA	Yes	60	BoxB	0.188674119	no_Cy_10	T_Final	no_Cy_Final
+K4NMCT10EU	B69	40.5	F8	H707	H510	K4NMCT10EU	49	51	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iC	10	NA	NA	No	NA	BoxB	0.653583405	no_Eu_10	T_Final	no_Eu_Final
+K4NMCT5CY	B61	46.6	F2	H711	H510	K4NMCT5CY	50	36	K0824	biomass inhibition	experiment	NA	no	Cy	NA	m(-) iC-1	5	NA	NA	Yes	NA	BoxB	0.817785672	no_Cy_5	T_Final	no_Cy_Final
+K4NMCT5EU	B44	52	D9	H714	H503	K4NMCT5EU	51	27	K0824	biomass inhibition	experiment	NA	no	Eu	NA	m(-) iC	5	NA	NA	No	NA	BoxB	0.822260905	no_Eu_5	T_Final	no_Eu_Final
+TM22-2	B27	0.736	C4	H723	H506	TM22-2	77	2	7/22/22	biomass	experiment	NA	no	NA	NA	K0722 TM22-2	NA	NA	NA	No	NA	BoxB	NA	no_NA_NA	T0_start	Start

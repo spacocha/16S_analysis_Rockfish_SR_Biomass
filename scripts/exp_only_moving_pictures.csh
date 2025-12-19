@@ -76,7 +76,7 @@ date
 
 qiime taxa barplot \
 	--i-table ${TABLE} \
-	--i-taxonomy ${TAXONOMY}.qza \
+	--i-taxonomy ${TAXONOMY} \
 	--m-metadata-file ${METADATA} \
 	--o-visualization ${PREFIX}_taxonomy_barplots.qzv
 
