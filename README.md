@@ -83,4 +83,11 @@ cp ../../config_files/FAPROTAX_analysis.config
 
 sbatch ../../scripts/FAPROTAX_analysis.csh
 
+#Run the analysis on just the final timepoints
+
+cp ../../config_files/FINAL_analysis.config
+
+#Edit the config file with parameters and run
+
+sbatch ../../scripts/FINAL_analysis.csh
 
