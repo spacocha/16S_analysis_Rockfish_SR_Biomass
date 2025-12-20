@@ -1,0 +1,32 @@
+MinName	Cy-A	Cy-B	Cy-C	Eu- A	Eu- B	Eu- C
+Firmicutes; Clostridia	0.483159714	0.553510826	0.54655992	0.678967182	0.696479152	0.228591365
+Bacteroidetes; Bacteroidia	0.00218887	0.002939938	0.001939282	0.00605665	0.004629489	0.490833932
+Proteobacteria; Gammaproteobacteria	0.360970043	0.276031938	0.164890422	0.103236285	0.097797947	0.005402377
+Proteobacteria; Deltaproteobacteria	4.67137E-05	7.89245E-05	7.7228E-05	4.55387E-05	0	0
+Firmicutes; Bacilli	0.119173301	0.082423509	0.224158644	0.194192295	0.107331039	0.015995687
+Unclassified Bacteria	0.014287716	0.001663992	0.000197361	0.000394669	0.020238784	0.246786062
+Synergistetes; Synergistia	0	0.045177712	0	0	0	2.11443E-05
+Spirochaetes; Spirochaetes	0.006059433	0.027261845	0.001287134	0.001275084	9.13715E-05	0.000930351
+Parvarchaeota; Parvarchaea	0	0	0	0	0	0
+Thermotogae; Thermotogae	1.33468E-05	3.28852E-05	6.86471E-05	0	0	0
+Proteobacteria; Alphaproteobacteria	0	0	0.024309667	0	0.066899156	0
+WWE1; Cloacamonae	0	0	0	0	0	0
+Bacteroidetes; Flavobacteriia	0	2.63082E-05	0	0	0	0
+Fusobacteria; Fusobacteriia	0.014047474	0.010852122	0.036511696	0.015801937	0.006426461	0.011354506
+Chloroflexi; Dehalococcoidetes	0	0	0	0	0	0
+Planctomycetes; Planctomycetia	1.33468E-05	0	0	0	0	0
+Chloroflexi; Anaerolineae	0	0	0	0	0	0
+OP3; BD4-9	0	0	0	0	0	0
+Euryarchaeota; Thermoplasmata	0	0	0	0	0	0
+OP3; koll11	0	0	0	0	0	0
+WS3; PRR-12	0	0	0	3.03591E-05	0	0
+Planctomycetes; Phycisphaerae	0	0	0	0	3.04572E-05	0
+Tenericutes; Mollicutes	2.66935E-05	0	0	0	0	4.22887E-05
+SAR406; AB16	0	0	0	0	0	0
+Verrucomicrobia; Verruco-5	0	0	0	0	0	0
+Planctomycetes; 	0	0	0	0	0	0
+Crenarchaeota; MCG	0	0	0	0	0	0
+Parvarchaeota; Micrarchaea	0	0	0	0	0	0
+Actinobacteria; Acidimicrobiia	0	0	0	0	4.56857E-05	0
+Bacteroidetes; Saprospirae	0	0	0	0	0	0
+Other	1.33468E-05	0	0	0	3.04572E-05	4.22887E-05
