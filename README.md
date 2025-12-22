@@ -91,3 +91,24 @@ cp ../../config_files/FINAL_analysis.config
 
 sbatch ../../scripts/FINAL_analysis.csh
 
+#Additional analyses can be run with the generic script
+
+cp ../../config_files/filter_and_ANCOM_generic.config
+
+#Run this with the config file as a command line variable (./ is important)
+
+sbatch ../../scripts/filter_and_ANCOM_generic.csh ./filter_and_ANCOM_generic.config
+
+#Using MATLAB online, upload the following files to your MATLAB drive
+#cleaned_grouped_MPA_taxonomy_barplots_T0_no.txt (T0 uninhibited)
+#cleaned_grouped_MPA_taxonomy_barplots_T0_yes.txt (T0 inhibited)
+#cleaned_grouped_MPA_taxonomy_barplots_T10_M.txt (T10 uninhibited)
+#cleaned_grouped_MPA_taxonomy_barplots_T10_O.txt (T10 inhibited)
+#cleaned_grouped_MPA_taxonomy_barplots_T5_M.tx (T5 uninhibited)
+#cleaned_grouped_MPA_taxonomy_barplots_T5_NO.txt (T5 inhibited)
+
+#Then open and run the following scripts from the editor
+PCoA_plot.m
+Taxa_plots.m
+
+
