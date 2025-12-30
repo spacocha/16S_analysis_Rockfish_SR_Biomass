@@ -99,6 +99,54 @@ cp ../../config_files/filter_and_ANCOM_generic.config
 
 sbatch ../../scripts/filter_and_ANCOM_generic.csh ./filter_and_ANCOM_generic.config
 
+#export the PCs for the distance matrix you are interested in
+
+sbatch ../../scripts/export_PCs_MATLAB.csh ./cleaned_grouped_MPA_core-metrics-results/bray_curtis_pcoa_results.qza ./cleaned_grouped_MPA_core-metrics-results/bray_curtis_pcoa_results_dir
+
+
+#complete the analysis by making the metadata file with only the no inhibition final time points
+#Then copy and submit the following
+#Substate without inhibition is the variable being tested
+
+cp ../../config_files/filtered_analysis_generic.config no_final_substrate_analysis.config
+
+#Submit with the correct config file (./ is important)
+
+sbatch ../../scripts/filtered_analysis_generic.csh ./no_final_substrate_analysis.config
+
+
+#complete the analysis by making the metadata file with only the inhibited final time points
+#Then copy and submit the following
+#substrate with inhibition is being tested
+
+cp ../../config_files/filtered_analysis_generic.config yes_final_substrate_analysis.config
+
+#Submit with the correct config file (./ is important)
+
+sbatch ../../scripts/filtered_analysis_generic.csh ./yes_final_substrate_analysis.config
+
+#complete the analysis
+#This provides differences between early and later time points
+
+cp ../../config_files/filtered_analysis_generic.config start_analysis_substrate.config
+
+#the ./ is important
+
+sbatch ../../scripts/filtered_analysis_generic.csh ./start_analysis_substrate.config                                         
+
+#complete the analysis
+#This provides differences between inhibition and no inhibition
+
+cp ../../config_files/filtered_analysis_generic.config K0824_analysis_substrate.config
+
+#the ./ is important
+
+sbatch ../../scripts/filtered_analysis_generic.csh ./K0824_analysis_substrate.config
+
+
+#This needs to be edited so it's only the PCS (and labeled)
+#I aligned the sample_metadata file so the order was the same, not sure if that's necessary
+
 #Using MATLAB online, upload the following files to your MATLAB drive
 #cleaned_grouped_MPA_taxonomy_barplots_T0_no.txt (T0 uninhibited)
 #cleaned_grouped_MPA_taxonomy_barplots_T0_yes.txt (T0 inhibited)
@@ -110,5 +158,6 @@ sbatch ../../scripts/filter_and_ANCOM_generic.csh ./filter_and_ANCOM_generic.con
 #Then open and run the following scripts from the editor
 PCoA_plot.m
 Taxa_plots.m
+
 
 
