@@ -157,7 +157,7 @@ sbatch ../../scripts/filtered_analysis_generic.csh ./K0824_analysis_substrate.co
 
 #Then open and run the following scripts from the editor
 PCoA_plot_2.m
-Taxa_plots_3.m
+Taxa_plots_3_nbo.m
 
 #The taxa bar chart legend has to be moved manually in MATLAB before being exported.
 
@@ -167,37 +167,39 @@ sbatch filter_and_ANCOM_ASV.csh ./filter_and_ANCOM_ASV.config
 
 #Pull out the sulfate reducing ASVs and compare between substrate types for uninhibited final time points
 
+qiime tools export --input-path emp_paired_MPA_taxonomy.qza --output-path emp_paired_MPA_taxonomy_export_dir
+
 perl ../../scripts/extract_functions_to_ASVs.pl FAPROTAX_analysis_dada2_l7_rare_dir/FAPROTAX_report.txt emp_paired_MPA_taxonomy_export_dir/taxonomy.tsv > function_ASV_output.txt
-
-(base) [sprehei1@bigmem24 kabirs_merged]$ perl ../../scripts/  
-
-extract_functions_to_ASVs.pl FAPROTAX_analysis_dada2_l7_rare_dir/FAPROTAX_report.txt emp_paired_MPA_taxonomy_export_dir/taxonomy.tsv > function_ASV_output.txt 
 
 Filter table with ASVs with function: 
 
-(base) [sprehei1@bigmem24 kabirs_merged]$ qiime tools export --input-path no_final_analysis_test2_filtered.qza --output-path no_final_analysis_test2_filtered_dir 
-(base) [sprehei1@bigmem24 kabirs_merged]$ cd no_final_analysis_test2_filtered_dir
- 
-(base) [sprehei1@bigmem24 no_final_analysis_test2_filtered_dir]$ biom convert -i feature-table.biom -o feature-table.biom.txt --table-type="OTU table" --to-tsv 
+qiime tools export --input-path no_final_analysis_test2_filtered.qza --output-path no_final_analysis_test2_filtered_dir 
 
-(base) [sprehei1@bigmem24 no_final_analysis_test2_filtered_dir]$ perl ../../../scripts/filter_table_by_ASVs.pl feature-table.biom.txt ../function_ASV_output.txt respiration_of_sulfur_compounds > sulfate_reducing_feature-table.txt 
+cd no_final_analysis_test2_filtered_dir
+ 
+biom convert -i feature-table.biom -o feature-table.biom.txt --table-type="OTU table" --to-tsv 
+
+perl ../../../scripts/filter_table_by_ASVs.pl feature-table.biom.txt ../function_ASV_output.txt respiration_of_sulfur_compounds > sulfate_reducing_feature-table.txt 
 
 
 Import into qiime: 
 
-(base) [sprehei1@bigmem24 no_final_analysis_test2_filtered_dir]$ biom convert -i sulfate_reducing_feature-table.txt -o sulfate_reducing_feature-table.biom --table-type="OTU table" --to-hdf5 
+biom convert -i sulfate_reducing_feature-table.txt -o sulfate_reducing_feature-table.biom --table-type="OTU table" --to-hdf5 
 
-(base) [sprehei1@bigmem24 no_final_analysis_test2_filtered_dir]$ qiime tools import --input-path sulfate_reducing_feature-table.biom --type 'FeatureTable[Frequency]' --output-path sulfate_reducing_feature-table.qza 
+qiime tools import --input-path sulfate_reducing_feature-table.biom --type 'FeatureTable[Frequency]' --output-path sulfate_reducing_feature-table.qza 
 
 
 Test with ANOSIM: 
 
-(base) [sprehei1@bigmem25 no_final_analysis_test2_filtered_dir]$ qiime diversity beta-group-significance --i-distance-matrix Sulfate_reducers_only_analysis_weighted_unifrac_distance_matrix.qza --m-metadata-file ../sample-metadata_no_final_analysis2.tsv --m-metadata-column Substrate --p-method 'anosim' --o-visualization Sulfate_reducers_only_analysis_weighted_unifrac_anosim.qzv
+qiime diversity beta-group-significance --i-distance-matrix Sulfate_reducers_only_analysis_weighted_unifrac_distance_matrix.qza --m-metadata-file ../sample-metadata_no_final_analysis2.tsv --m-metadata-column Substrate --p-method 'anosim' --o-visualization Sulfate_reducers_only_analysis_weighted_unifrac_anosim.qzv
 
-(base) [sprehei1@bigmem25 no_final_analysis_test2_filtered_dir]$ perl ../../../scripts/filter_table_by_ASVs.pl feature-table.biom.txt ../function_ASV_output.txt fermentation > fermentation_feature-table.txt
-(base) [sprehei1@bigmem25 no_final_analysis_test2_filtered_dir]$ biom convert -i fermentation_feature-table.txt -o fermentation_feature-table.biom --table-type="OTU table" --to-hdf5
-(base) [sprehei1@bigmem25 no_final_analysis_test2_filtered_dir]$ qiime tools import --input-path fermentation_feature-table.biom --type 'FeatureTable[Frequency]' --output-path fermentation_feature-table.qza
-(base) [sprehei1@bigmem25 no_final_analysis_test2_filtered_dir]$ qiime diversity-lib weighted-unifrac --i-table fermentation_feature-table.qza --i-phylogeny ../cleaned_grouped_MPA_rooted-tree.qza --o-distance-matrix fermentation_only_weighted_unifrac_distance_matrix.qza
+perl ../../../scripts/filter_table_by_ASVs.pl feature-table.biom.txt ../function_ASV_output.txt fermentation > fermentation_feature-table.txt
+
+biom convert -i fermentation_feature-table.txt -o fermentation_feature-table.biom --table-type="OTU table" --to-hdf5
+
+qiime tools import --input-path fermentation_feature-table.biom --type 'FeatureTable[Frequency]' --output-path fermentation_feature-table.qza
+
+qiime diversity-lib weighted-unifrac --i-table fermentation_feature-table.qza --i-phylogeny ../cleaned_grouped_MPA_rooted-tree.qza --o-distance-matrix fermentation_only_weighted_unifrac_distance_matrix.qza
 (base) [sprehei1@bigmem25 no_final_analysis_test2_filtered_dir]$ qiime diversity beta-group-significance --i-distance-matrix fermentation_only_weighted_unifrac_distance_matrix.qza --m-metadata-file ../sample-metadata_no_final_analysis2.tsv --m-metadata-column Substrate --p-method 'anosim' --o-visualization fermentation_only_weighted_unifrac_anosim_Substrate.qzv
 
 
