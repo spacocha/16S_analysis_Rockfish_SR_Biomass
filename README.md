@@ -50,7 +50,7 @@ sbatch ../../scripts/quality_control_biomass.csh
 
 #Next, filter out the experimental samples and quantify the total number of reads to use
 
-cp ../../config_files/filter_and_quantify.config
+cp ../../config_files/filter_and_quantify.config .
 
 #Then submit the script
 
@@ -59,7 +59,7 @@ sbatch ../../scripts/filter_and_quantify.csh
 #Check the count file in ${PREFIX}_biomass_exp_group_dir/feature-table.biom.count.txt
 #Use the first number as the sequence depth in the following file
 
-cp ../../config_files/exp_only_moving_pictures.config
+cp ../../config_files/exp_only_moving_pictures.config .
 
 #Then submit as
 
@@ -67,7 +67,7 @@ sbatch ../../scripts/exp_only_moving_pictures.csh
 
 #Do the beta diversity analysis on BC and Weighted Unifrac distance matrices
 
-cp ../../config_files/beta_group_significance.config
+cp ../../config_files/beta_group_significance.config .
 
 #Submit the job
 
@@ -77,7 +77,7 @@ sbatch ../../scripts/beta_group_significance.csh
 
 #This includes downloading FAPROTAX, which should only be done once
 
-cp ../../config_files/FAPROTAX_analysis.config
+cp ../../config_files/FAPROTAX_analysis.config .
 
 #Adjust parameters and run
 
@@ -85,7 +85,7 @@ sbatch ../../scripts/FAPROTAX_analysis.csh
 
 #Run the analysis on just the final timepoints
 
-cp ../../config_files/FINAL_analysis.config
+cp ../../config_files/FINAL_analysis.config .
 
 #Edit the config file with parameters and run
 
@@ -93,7 +93,7 @@ sbatch ../../scripts/FINAL_analysis.csh
 
 #Additional analyses can be run with the generic script
 
-cp ../../config_files/filter_and_ANCOM_generic.config
+cp ../../config_files/filter_and_ANCOM_generic.config .
 
 #Run this with the config file as a command line variable (./ is important)
 
@@ -108,7 +108,7 @@ sbatch ../../scripts/export_PCs_MATLAB.csh ./cleaned_grouped_MPA_core-metrics-re
 #Then copy and submit the following
 #Substate without inhibition is the variable being tested
 
-cp ../../config_files/filtered_analysis_generic.config no_final_substrate_analysis.config
+cp ../../config_files/filtered_analysis_generic.config no_final_substrate_analysis.config .
 
 #Submit with the correct config file (./ is important)
 
@@ -119,7 +119,7 @@ sbatch ../../scripts/filtered_analysis_generic.csh ./no_final_substrate_analysis
 #Then copy and submit the following
 #substrate with inhibition is being tested
 
-cp ../../config_files/filtered_analysis_generic.config yes_final_substrate_analysis.config
+cp ../../config_files/filtered_analysis_generic.config yes_final_substrate_analysis.config .
 
 #Submit with the correct config file (./ is important)
 
@@ -128,7 +128,7 @@ sbatch ../../scripts/filtered_analysis_generic.csh ./yes_final_substrate_analysi
 #complete the analysis
 #This provides differences between early and later time points
 
-cp ../../config_files/filtered_analysis_generic.config start_analysis_substrate.config
+cp ../../config_files/filtered_analysis_generic.config start_analysis_substrate.config .
 
 #the ./ is important
 
@@ -137,7 +137,7 @@ sbatch ../../scripts/filtered_analysis_generic.csh ./start_analysis_substrate.co
 #complete the analysis
 #This provides differences between inhibition and no inhibition
 
-cp ../../config_files/filtered_analysis_generic.config K0824_analysis_substrate.config
+cp ../../config_files/filtered_analysis_generic.config K0824_analysis_substrate.config .
 
 #the ./ is important
 
